@@ -1,6 +1,7 @@
 package com.thinline20.filemanager
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
@@ -27,5 +28,10 @@ class MainActivity : AppCompatActivity() {
         val recyclerViewDecoration =
             DividerItemDecoration(this, androidx.recyclerview.widget.LinearLayoutManager.VERTICAL)
         recyclerView.addItemDecoration(recyclerViewDecoration)
+
+        val currentDir: TextView = findViewById(R.id.currentDir)
+        currentDir.setOnClickListener {
+            currentDir.text = "Clicked"
+        }
     }
 }

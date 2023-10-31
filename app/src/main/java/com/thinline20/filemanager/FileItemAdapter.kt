@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,6 +15,7 @@ class FileItemAdapter(private val context: Context, private val fileList: Mutabl
         val filename: TextView = itemView.findViewById(R.id.filename)
         val fileDesc: TextView = itemView.findViewById(R.id.fileDesc)
         val fileIcon: ImageView = itemView.findViewById(R.id.fileIcon)
+        val fileItem: LinearLayout = itemView.findViewById(R.id.fileItem)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,6 +34,10 @@ class FileItemAdapter(private val context: Context, private val fileList: Mutabl
             holder.fileIcon.setImageResource(R.drawable.baseline_folder_24)
         } else {
             holder.fileIcon.setImageResource(R.drawable.baseline_description_24)
+        }
+
+        holder.fileItem.setOnClickListener {
+            holder.fileDesc.text = "Clicked"
         }
     }
 }

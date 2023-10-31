@@ -20,14 +20,41 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/currentDir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="8sp"
+        android:paddingTop="4sp"
+        android:paddingEnd="8sp"
+        android:paddingBottom="4sp"
+        android:text="/home/thinline20/dev/android/FileManager/src/main/"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/material_dynamic_neutral80"
+        app:layout_constraintBottom_toBottomOf="@+id/currentDir"
+        app:layout_constraintTop_toBottomOf="@+id/currentDir" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/file_view"
-        android:layout_width="411dp"
-        android:layout_height="669dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/currentDir"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

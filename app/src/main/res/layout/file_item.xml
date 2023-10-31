@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fileItem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:clickable="true">
 
     <ImageView
         android:id="@+id/fileIcon"
         android:layout_width="146dp"
         android:layout_height="82dp"
         android:layout_weight="1"
+        android:contentDescription="@string/file_folder_icon"
         android:src="@drawable/baseline_description_24" />
 
     <LinearLayout
@@ -21,13 +24,17 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center|start"
+            android:paddingStart="4sp"
+            android:paddingEnd="4sp"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/fileDesc"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:gravity="center|start" />
+            android:gravity="center|start"
+            android:paddingStart="4sp"
+            android:paddingEnd="4sp" />
     </LinearLayout>
 
 </LinearLayout>
